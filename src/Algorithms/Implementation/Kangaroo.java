@@ -32,7 +32,15 @@ public class Kangaroo {
             System.out.println("NO");
         } else if (v2 == v1 && x2 > x1) {
             System.out.println("NO");
-        }else{
+        } else if (x2 > x1 && v1 > v2 && x2 - x1 < v1 - v2) {
+            System.out.println("NO");
+        } else if (x1 > x2 && v2 > v1 && x1 - x2 < v2 - v1) {
+            System.out.println("NO");
+        } else if (x2 > x1 && v1 > v2 && v2 - v1 < x1 - x2) {
+            System.out.println("NO");
+        } else if (x1 > x2 && v2 > v1 && v1 - v2 < x2 - x1) {
+            System.out.println("NO");
+        } else {
             System.out.println("YES");
         }
     }
