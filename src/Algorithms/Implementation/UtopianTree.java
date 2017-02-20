@@ -5,16 +5,13 @@
  */
 package Algorithms.Implementation;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
  *
- * @author Benjineer
+ * @author DATA INFOSEC
  */
-public class SockMerchant {
+public class UtopianTree {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -24,23 +21,19 @@ public class SockMerchant {
             c[c_i] = in.nextInt();
         }
 
-        int match = 0;
         for (int i = 0; i < c.length; i++) {
-            int count = 0;
-            for (int j = 0; j < c.length; j++) {
-                if (c[i] == c[j]) {
-                    count++;
-
+            int h = 1;
+//            System.out.println(c[i]);
+            for (int j = 2; j < (c[i] + 2); j++) {
+                if (j % 2 == 0) {
+                    h = h * 2;
+                } else {
+                    h = h + 1;
                 }
+//                System.out.println(h);
             }
-            c[i] = 0;
-            if (count % 2 == 0) {
-                match++;
-            }
+            System.out.println(h);
         }
-
-        System.out.println(match);
-
     }
 
 }
