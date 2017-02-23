@@ -51,16 +51,15 @@ public class InterQuartileRange {
             }
 
         }
-
+        Arrays.sort(x);
 //        float q2 = median(x);
         int[] b = new int[x.length / 2];
         int[] c = new int[x.length / 2];
         b = Arrays.copyOfRange(x, 0, x.length / 2);
-        c = Arrays.copyOfRange(x, (x.length / 2), x.length);
         double q1 = median(b);
         double q3;
 //        double q3 = median(c);
-        if (n % 2 != 0) {
+        if (x.length % 2 != 0) {
             c = Arrays.copyOfRange(x, (x.length / 2) + 1, x.length);
             q3 = median(c);
         } else {
